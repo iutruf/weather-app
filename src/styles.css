@@ -93,17 +93,17 @@ h1 {
 
   line-height: 20px;
 }
-a {
+.degree {
   font-size: 20px;
   color: #f0eeee;
   opacity: 50%;
   text-decoration: none;
 }
-a:focus {
+.degree:focus {
   color: #f0eeee;
   opacity: 100%;
 }
-a:visited {
+.degree:visited {
   color: #f0eeee;
   opacity: 100%;
 }
@@ -330,4 +330,14 @@ hr {
   justify-content: left;
 
   padding: 0;
+}
+.gitHub {
+  display: block;
+  width: 320px;
+  padding: 20px 0;
+
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
 }
