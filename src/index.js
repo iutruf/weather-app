@@ -1,33 +1,39 @@
-let dateNow = document.querySelector("#current-date");
-let todayDate = new Date();
-let todayDayBig = todayDate.getDay();
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let todayMonthBig = todayDate.getMonth();
-let months = [
-  "Jan",
-  "Fab",
-  "March",
-  "Apr",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let todayDateBig = todayDate.getDate();
-dateNow.innerHTML = `${days[todayDayBig]}, ${months[todayMonthBig]} ${todayDateBig}`;
-
-let timeNow = document.querySelector("#current-time");
-let currentTime = new Date();
-let hours = currentTime.getHours();
-let minutes = currentTime.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+function formatDate() {
+  let todayDate = new Date();
+  let todayDayBig = todayDate.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let todayMonthBig = todayDate.getMonth();
+  let months = [
+    "Jan",
+    "Fab",
+    "March",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let todayDateBig = todayDate.getDate();
+  return `${days[todayDayBig]}, ${months[todayMonthBig]} ${todayDateBig}`;
 }
-timeNow.innerHTML = `${hours} : ${minutes}`;
+let dateNow = document.querySelector("#current-date");
+dateNow.innerHTML = formatDate();
+
+function formatTime() {
+  let currentTime = new Date();
+  let hours = currentTime.getHours();
+  let minutes = currentTime.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours} : ${minutes}`;
+}
+let timeNow = document.querySelector("#current-time");
+timeNow.innerHTML = formatTime();
 
 function showTempPlace(response) {
   let temperature = Math.round(response.data.main.temp);
