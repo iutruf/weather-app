@@ -68,7 +68,7 @@ h1 {
   margin-bottom: 65px;
 }
 .today-data {
-  padding-bottom: 65px;
+  margin-bottom: 16px;
   height: 104px;
 }
 .big-temp {
@@ -222,6 +222,7 @@ h1 {
   height: 33px;
   margin-bottom: 0;
 }
+
 .today-wind,
 .today-humidity {
   margin-top: 16px;
@@ -349,6 +350,7 @@ hr {
 
   padding: 0;
 }
+
 .gitHub {
   display: block;
   width: 320px;
