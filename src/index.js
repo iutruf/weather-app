@@ -48,8 +48,14 @@ function showTempPlace(response) {
   let humidityElement = document.querySelector("#humidity");
   let humidity = response.data.main.humidity;
   humidityElement.innerHTML = `${humidity} %`;
-  //let descriptionElement = document.querySelector("#description");
-  //descriptionElement.innerHTML = response.data.weather[0].description;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon-big");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showPosition(position) {

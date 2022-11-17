@@ -179,8 +179,7 @@ h1 {
   margin-left: 23px;
   padding: 0;
 }
-.wind_text,
-.cloudy_moon_text {
+.wind_text {
   color: #f0eeee;
   text-align: left;
   line-height: 20px;
@@ -190,8 +189,17 @@ h1 {
 
   padding: 0;
 }
-.cloudy_moon_text {
-  margin-left: 12px;
+.description {
+  margin: 0 0 25px 18px;
+  text-align: left;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  color: #f0eeee;
+}
+.description::first-letter {
+  text-transform: uppercase;
 }
 .today-weather,
 .today-wind,
@@ -199,11 +207,21 @@ h1 {
   margin-left: 12px;
   padding: 0;
 }
-.today-data {
-  width: 320px;
-  margin-bottom: 65px;
+.humidity {
+  position: relative;
+  top: -3px;
 }
 
+.icon-big {
+  width: 70px;
+  position: relative;
+  top: -20px;
+  left: -13px;
+}
+.today-weather {
+  height: 33px;
+  margin-bottom: 0;
+}
 .today-wind,
 .today-humidity {
   margin-top: 16px;
