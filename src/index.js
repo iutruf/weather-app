@@ -21,6 +21,7 @@ function formatDate() {
   return `${days[todayDayBig]}, ${months[todayMonthBig]} ${todayDateBig}`;
 }
 let dateNow = document.querySelector("#current-date");
+
 dateNow.innerHTML = formatDate();
 
 function formatTime() {
@@ -76,6 +77,7 @@ function searchCity(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
+
   searchCity(city);
 }
 let searchForm = document.querySelector("#search-form");
