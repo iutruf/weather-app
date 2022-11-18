@@ -99,7 +99,22 @@ h1 {
 
   text-decoration: none;
 }
+.degree.active {
+  color: #f0eeee;
+  opacity: 100%;
+  cursor: default;
+}
+.degree.active:hover {
+  color: #f0eeee;
+  opacity: 100%;
+}
 
+.degree:hover {
+  color: #4dbfd9;
+  opacity: 100%;
+
+  transition: all 200ms ease-in-out;
+}
 .degline {
   font-size: 14px;
   opacity: 50%;
