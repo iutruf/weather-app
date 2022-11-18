@@ -37,9 +37,10 @@ let timeNow = document.querySelector("#current-time");
 timeNow.innerHTML = formatTime();
 
 function showTempPlace(response) {
-  let temperature = Math.round(response.data.main.temp);
+  let celsiusTemperature = Math.round(response.data.main.temp);
   let temperatureElementBig = document.querySelector("#big-number");
-  temperatureElementBig.innerHTML = temperature;
+  temperatureElementBig.innerHTML = celsiusTemperature;
+
   let cityElement = document.querySelector("#city");
   let city = response.data.name;
   let country = response.data.sys.country;
@@ -82,3 +83,27 @@ function handleSubmit(event) {
 }
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElementBig = document.querySelector("#big-number");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElementBig.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelTemp(event) {
+  event.preventDefault();
+  let temperatureElementBig = document.querySelector("#big-number");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
+  temperatureElementBig.innerHTML = celsiucTemperature;
+}
+let celsiucTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelTemp);

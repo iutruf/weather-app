@@ -96,23 +96,8 @@ h1 {
 .degree {
   font-size: 20px;
   color: #f0eeee;
-  opacity: 50%;
+
   text-decoration: none;
-}
-.degree:focus {
-  color: #f0eeee;
-  opacity: 100%;
-}
-.degree:visited {
-  color: #f0eeee;
-  opacity: 100%;
-}
-
-.degree:hover {
-  color: #4dbfd9;
-  opacity: 100%;
-
-  transition: all 200ms ease-in-out;
 }
 
 .degline {
