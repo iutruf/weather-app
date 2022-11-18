@@ -99,7 +99,7 @@ function displayCelTemp(event) {
 
   temperatureElementBig.innerHTML = celsiucTemperature;
 }
-let celsiucTemperature = null;
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
