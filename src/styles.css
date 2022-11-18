@@ -96,7 +96,7 @@ h1 {
 .degree {
   font-size: 20px;
   color: #f0eeee;
-
+  opacity: 50%;
   text-decoration: none;
 }
 .degree.active {
