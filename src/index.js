@@ -53,30 +53,30 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-  let direction = forecastDay.wind_deg;
-  if (
-    forecastDay.wind_deg >= 337.5 &&
-    forecastDay.wind_deg <= 360 &&
-    forecastDay.wind_deg >= 0 &&
-    forecastDay.wind_deg < 22.5
-  ) {
-    direction = `W`;
-  } else if (forecastDay.wind_deg >= 22.5 && forecastDay.wind_deg < 67.5) {
-    direction = `SW`;
-  } else if (forecastDay.wind_deg >= 67.5 && forecastDay.wind_deg < 112.5) {
-    direction = `S`;
-  } else if (forecastDay.wind_deg >= 112.5 && forecastDay.wind_deg < 157.5) {
-    direction = `SE`;
-  } else if (forecastDay.wind_deg >= 157.5 && forecastDay.wind_deg < 202.5) {
-    direction = `E`;
-  } else if (forecastDay.wind_deg >= 202.5 && forecastDay.wind_deg < 247.5) {
-    direction = `NE`;
-  } else if (forecastDay.wind_deg >= 247.5 && forecastDay.wind_deg < 292.5) {
-    direction = `N`;
-  } else {
-    direction = `NW`;
-  }
-
+  let direction = forecast.forEach(function (forecastDay) {
+    if (
+      forecastDay.wind_deg >= 337.5 &&
+      forecastDay.wind_deg <= 360 &&
+      forecastDay.wind_deg >= 0 &&
+      forecastDay.wind_deg < 22.5
+    ) {
+      direction = `W`;
+    } else if (forecastDay.wind_deg >= 22.5 && forecastDay.wind_deg < 67.5) {
+      direction = `SW`;
+    } else if (forecastDay.wind_deg >= 67.5 && forecastDay.wind_deg < 112.5) {
+      direction = `S`;
+    } else if (forecastDay.wind_deg >= 112.5 && forecastDay.wind_deg < 157.5) {
+      direction = `SE`;
+    } else if (forecastDay.wind_deg >= 157.5 && forecastDay.wind_deg < 202.5) {
+      direction = `E`;
+    } else if (forecastDay.wind_deg >= 202.5 && forecastDay.wind_deg < 247.5) {
+      direction = `NE`;
+    } else if (forecastDay.wind_deg >= 247.5 && forecastDay.wind_deg < 292.5) {
+      direction = `N`;
+    } else {
+      direction = `NW`;
+    }
+  });
   let forecastHTML = `<div class="forecast">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 7) {
