@@ -105,7 +105,7 @@ function displayForecast(response) {
         </div>
 
         <div class="col week-weather-col">${direction}
-          <img src="src/images/wind_w.svg" alt="" />
+         
           <span
             class="wind-number"
             >${Math.round(forecastDay.wind_speed)}
