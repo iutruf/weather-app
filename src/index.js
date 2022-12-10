@@ -43,7 +43,7 @@ function formatDay(timestamp, index) {
   let date = currentDate.getDate();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   if (index === 0) {
-    return "Today";
+    return `Today`;
   } else {
     return `${days[day]}, ${date}`;
   }
@@ -53,32 +53,34 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-  let direction = forecast.forEach(function (forecastDay) {
+
+  let forecastHTML = `<div class="forecast">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    let direction = forecastDay.wind_deg;
     if (
       forecastDay.wind_deg >= 337.5 &&
       forecastDay.wind_deg <= 360 &&
       forecastDay.wind_deg >= 0 &&
       forecastDay.wind_deg < 22.5
     ) {
-      direction = `W`;
+      direction = `<img src="src/images/wind_w.svg" alt="" />`;
     } else if (forecastDay.wind_deg >= 22.5 && forecastDay.wind_deg < 67.5) {
-      direction = `SW`;
+      direction = `<img src="src/images/wind_sw.svg" alt="" />`;
     } else if (forecastDay.wind_deg >= 67.5 && forecastDay.wind_deg < 112.5) {
-      direction = `S`;
+      direction = `<img src="src/images/wind_s.svg" alt="" />`;
     } else if (forecastDay.wind_deg >= 112.5 && forecastDay.wind_deg < 157.5) {
-      direction = `SE`;
+      direction = `<img src="src/images/wind_se.svg" alt="" />`;
     } else if (forecastDay.wind_deg >= 157.5 && forecastDay.wind_deg < 202.5) {
-      direction = `E`;
+      direction = `<img src="src/images/wind_e.svg" alt="" />`;
     } else if (forecastDay.wind_deg >= 202.5 && forecastDay.wind_deg < 247.5) {
-      direction = `NE`;
+      direction = `<img src="src/images/wind_ne.svg" alt="" />`;
     } else if (forecastDay.wind_deg >= 247.5 && forecastDay.wind_deg < 292.5) {
-      direction = `N`;
+      direction = `<img src="src/images/wind_n.svg" alt="" />`;
     } else {
-      direction = `NW`;
+      direction = `<img src="src/images/wind_nw.svg" alt="" />`;
     }
-  });
-  let forecastHTML = `<div class="forecast">`;
-  forecast.forEach(function (forecastDay, index) {
+
     if (index < 7) {
       forecastHTML =
         forecastHTML +
