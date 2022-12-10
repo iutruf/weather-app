@@ -87,7 +87,7 @@ function displayForecast(response) {
         `
 <div class="row week-weather">
         <div class="col week-weather-col">
-          <span class="day-text">${formatDay(forecastDay.dt)}</span>
+          <span class="day-text">${formatDay(forecastDay.dt, index)}</span>
         </div>
         <div class="col week-weather-col">
           <span class="day-temperature-max">${Math.round(
