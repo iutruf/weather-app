@@ -30,7 +30,7 @@
     <title>Weather_app</title>
   </head>
   <body>
-    <div class="container fone">
+    <div class="container fone" id="fone">
       <div class="scroll">
         <form id="search-form">
           <input
@@ -84,142 +84,9 @@
         </div>
       </div>
       <div class="description" id="description"></div>
-      <hr />
-      <div class="row week-weather">
-        <div class="col week-weather-col">
-          <span class="day-text">Today</span>
-        </div>
-        <div class="col week-weather-col">
-          <span class="day-temperature-max">17°</span
-          ><span class="day-temperature-min">/11°</span>
-        </div>
-        <div class="col week-weather-col">
-          <img src="src/images/deep_cloudy_sun_icon.svg" alt="" />
-        </div>
+      <hr class="single" />
 
-        <div class="col week-weather-col">
-          <img src="src/images/wind_direction.svg" alt="" /><span
-            class="wind-number"
-            >5</span
-          ><span class="wind-dimension"> m/s</span>
-        </div>
-      </div>
-
-      <hr />
-      <div class="row week-weather">
-        <div class="col week-weather-col">
-          <span class="day-text">Sat, 01</span>
-        </div>
-        <div class="col week-weather-col">
-          <span class="day-temperature-max">15°</span
-          ><span class="day-temperature-min">/10°</span>
-        </div>
-        <div class="col week-weather-col">
-          <img src="src/images/sun_icon.svg" alt="" />
-        </div>
-
-        <div class="col week-weather-col">
-          <img src="src/images/wind_n.svg" alt="" /><span class="wind-number"
-            >8</span
-          ><span class="wind-dimension"> m/s</span>
-        </div>
-      </div>
-      <hr />
-      <div class="row week-weather">
-        <div class="col week-weather-col">
-          <span class="day-text">Sun, 02</span>
-        </div>
-        <div class="col week-weather-col">
-          <span class="day-temperature-max">12°</span
-          ><span class="day-temperature-min">/4°</span>
-        </div>
-        <div class="col week-weather-col">
-          <img src="src/images/cloudy_sun_icon.svg" alt="" />
-        </div>
-
-        <div class="col week-weather-col">
-          <img src="src/images/wind_n.svg" alt="" /><span class="wind-number"
-            >10</span
-          ><span class="wind-dimension"> m/s</span>
-        </div>
-      </div>
-      <hr />
-      <div class="row week-weather">
-        <div class="col week-weather-col">
-          <span class="day-text">Mon, 03</span>
-        </div>
-        <div class="col week-weather-col">
-          <span class="day-temperature-max">15°</span
-          ><span class="day-temperature-min">/5°</span>
-        </div>
-        <div class="col week-weather-col">
-          <img src="src/images/deep_cloudy_sun_icon.svg" alt="" />
-        </div>
-
-        <div class="col week-weather-col">
-          <img src="src/images/wind_w.svg" alt="" /><span class="wind-number"
-            >9</span
-          ><span class="wind-dimension"> m/s</span>
-        </div>
-      </div>
-      <hr />
-      <div class="row week-weather">
-        <div class="col week-weather-col">
-          <span class="day-text">Tue, 04</span>
-        </div>
-        <div class="col week-weather-col">
-          <span class="day-temperature-max">15°</span
-          ><span class="day-temperature-min">/9°</span>
-        </div>
-        <div class="col week-weather-col">
-          <img src="src/images/deep_cloudy_icon.svg" alt="" />
-        </div>
-
-        <div class="col week-weather-col">
-          <img src="src/images/wind_n.svg" alt="" /><span class="wind-number"
-            >9</span
-          ><span class="wind-dimension"> m/s</span>
-        </div>
-      </div>
-      <hr />
-      <div class="row week-weather">
-        <div class="col week-weather-col">
-          <span class="day-text">Wed, 05</span>
-        </div>
-        <div class="col week-weather-col">
-          <span class="day-temperature-max">17°</span
-          ><span class="day-temperature-min">/12°</span>
-        </div>
-        <div class="col week-weather-col">
-          <img src="src/images/rain_2_icon.svg" alt="" />
-        </div>
-
-        <div class="col week-weather-col">
-          <img src="src/images/wind_ne.svg" alt="" /><span class="wind-number"
-            >6</span
-          ><span class="wind-dimension"> m/s</span>
-        </div>
-      </div>
-      <hr />
-      <div class="row week-weather">
-        <div class="col week-weather-col">
-          <span class="day-text">Thu, 06</span>
-        </div>
-        <div class="col week-weather-col">
-          <span class="day-temperature-max">17°</span
-          ><span class="day-temperature-min">/11°</span>
-        </div>
-        <div class="col week-weather-col">
-          <img src="src/images/rain_3_icon.svg" alt="" />
-        </div>
-
-        <div class="col week-weather-col">
-          <img src="src/images/wind_e.svg" alt="" /><span class="wind-number"
-            >10</span
-          ><span class="wind-dimension"> m/s</span>
-        </div>
-      </div>
-      <hr />
+      <div class="forecast" id="forecast"></div>
       <div class="row menu">
         <div class="col menu-col-left">
           <div class="menu-today">

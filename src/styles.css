@@ -2,7 +2,7 @@
   display: block;
   width: 320px;
   padding: 0;
-  background-color: #14314b;
+  background: #14314b;
   margin: 0 auto;
 }
 
@@ -99,6 +99,7 @@ h1 {
   opacity: 50%;
   text-decoration: none;
 }
+
 .degree.active {
   color: #f0eeee;
   opacity: 100%;
@@ -115,6 +116,7 @@ h1 {
 
   transition: all 200ms ease-in-out;
 }
+
 .degline {
   font-size: 14px;
   opacity: 50%;
@@ -194,7 +196,7 @@ h1 {
   text-align: left;
   line-height: 24px;
   font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   color: #f0eeee;
 }
@@ -231,14 +233,15 @@ h1 {
 hr {
   border: none;
   margin: 0 18px;
-
   height: 1px;
   color: #f0eeee;
 
   opacity: 50%;
 }
+
 .week-weather {
   padding: 5px 18px;
+  width: 320px;
   margin-left: 0;
   margin-right: 0;
   height: 46px;
@@ -253,14 +256,13 @@ hr {
   font-weight: 400;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
-  vertical-align: middle;
 }
 .day-temperature-max,
 .day-temperature-min,
 .wind-number {
   font-family: "Roboto Condensed", sans-serif;
   text-align: left;
-  vertical-align: middle;
+
   font-weight: 400;
 }
 .day-temperature-max {
@@ -284,6 +286,10 @@ hr {
   padding: 0;
   table-layout: auto;
   vertical-align: middle;
+}
+.icon-small {
+  position: relative;
+  top: -3px;
 }
 .menu-hourly,
 .menu-today,
