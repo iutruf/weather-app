@@ -36,13 +36,17 @@ function formatTime() {
 let timeNow = document.querySelector("#current-time");
 timeNow.innerHTML = formatTime();
 
-function formatDay(timestamp) {
+function formatDay(timestamp, index) {
   let currentDate = new Date(timestamp * 1000);
 
   let day = currentDate.getDay();
   let date = currentDate.getDate();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return `${days[day]}, ${date}`;
+  if (index === 0) {
+    return "Today";
+  } else {
+    return `${days[day]}, ${date}`;
+  }
 }
 
 function displayForecast(response) {
