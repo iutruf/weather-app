@@ -23,16 +23,16 @@ function formatDate() {
 let dateNow = document.querySelector("#current-date");
 dateNow.innerHTML = formatDate();
 
-function changeTheme() {
-  let time = new Date();
-  let link = document.querySelector(`link[rel="stylesheet"]`);
-  if (time.getHours() > 6 && time.getHours() < 18) {
-    link.setAttribute(`href`, `src/styles-day.css`);
-  } else {
-    link.setAttribute(`href`, `src/styles.css`);
-  }
-}
-changeTheme();
+//function changeTheme() {
+//let time = new Date();
+//let link = document.querySelector(`link[rel="stylesheet"]`);
+// if (time.getHours() > 6 && time.getHours() < 18) {
+// link.setAttribute(`href`, `src/styles-day.css`);
+//} else {
+// link.setAttribute(`href`, `src/styles.css`);
+// }
+//}
+//changeTheme();
 
 function formatTime() {
   let currentTime = new Date();
