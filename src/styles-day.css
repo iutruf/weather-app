@@ -1,12 +1,14 @@
 body {
   color: #14314b;
+  background: #f0eeee;
 }
 
 .fone {
   display: block;
   width: 320px;
   padding: 0;
-  background: #f0eeee;
+  background: #ffffff;
+  box-shadow: #14314b;
   margin: 0 auto;
 }
 
